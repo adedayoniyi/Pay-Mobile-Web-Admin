@@ -91,7 +91,7 @@ class SettingsServices {
     return errorText;
   }
 
-  void deleteAdmin({
+  void deleteAdminOrUser({
     required BuildContext context,
     required String username,
     required String authorizationPin,
@@ -102,7 +102,7 @@ class SettingsServices {
       showDialogLoader(context);
       http.Response res = await http
           .delete(
-            Uri.parse('$uri/admin/deleteAdmin'),
+            Uri.parse('$uri/admin/deleteUser'),
             headers: <String, String>{
               "Content-Type": "application/json; charset=UTF-8",
               "x-auth-token": userToken,
