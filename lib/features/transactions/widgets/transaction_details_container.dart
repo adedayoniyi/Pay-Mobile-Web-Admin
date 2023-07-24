@@ -20,7 +20,7 @@ class TransactionDetailsContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 15),
+      padding: const EdgeInsets.only(bottom: 15),
       child: Container(
         width: screenWidth,
         height: 100,
@@ -29,14 +29,14 @@ class TransactionDetailsContainer extends StatelessWidget {
           color: greyScale850,
         ),
         child: Padding(
-          padding: EdgeInsets.only(left: 10),
+          padding: const EdgeInsets.only(left: 10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 label,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                 ),
@@ -48,12 +48,12 @@ class TransactionDetailsContainer extends StatelessWidget {
                           "assets/images/dialog_success_image.png",
                           height: 25,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
                         Text(
                           content,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 24,
                             color: primaryAppColor,
                           ),

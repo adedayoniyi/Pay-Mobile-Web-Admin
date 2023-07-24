@@ -19,3 +19,4 @@ const invertedLogo = "assets/images/inverted_logo.png";
 const gradientCircle = "assets/images/gradient_circle.png";
 const cardChipImage = "assets/images/card_chip_image.png";
 const iphone = "assets/images/iphone.png";
+const loginScreenImage = "assets/images/login_screen_image.png";

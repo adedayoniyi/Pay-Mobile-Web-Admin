@@ -140,9 +140,9 @@ class _UserTransactionsScreenState extends State<UserTransactionsScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Column(
                       children: [
-                        Text(
+                        const Text(
                           "User Transactions",
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
                           ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pay_mobile_web_admin/core/utils/color_constants.dart';
-import 'package:pay_mobile_web_admin/core/utils/global_constants.dart';
 
 class CustomButton extends StatelessWidget {
   final String buttonText;
@@ -31,7 +30,7 @@ class CustomButton extends StatelessWidget {
           backgroundColor: MaterialStatePropertyAll(
             buttonColor,
           ),
-          fixedSize: MaterialStatePropertyAll(
+          fixedSize: const MaterialStatePropertyAll(
             Size(300, 50),
           ),
           shape: MaterialStatePropertyAll(

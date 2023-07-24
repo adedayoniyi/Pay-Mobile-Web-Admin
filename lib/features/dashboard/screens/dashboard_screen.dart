@@ -41,8 +41,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
     const Color(0xFFAEC4E0),
     const Color(0xFFC5AEE0),
     const Color(0xFFE0AEC4),
-    Color(0xFFb4b5b9),
-    Color(0xFFd2b48c),
+    const Color(0xFFb4b5b9),
+    const Color(0xFFd2b48c),
     //Colors.purple,
   ];
   List<bool> willContainRow = [
@@ -149,9 +149,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
               children: [
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       "Dashboard",
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                       ),
@@ -201,7 +201,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           willContainRow: willContainRow[index],
                         );
                       } else {}
-                      return CircularLoader();
+                      return const CircularLoader();
                     },
                   );
                 },
@@ -230,7 +230,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           willContainRow: willContainRow[index],
                         );
                       } else {}
-                      return CircularLoader();
+                      return const CircularLoader();
                     },
                   );
                 },
@@ -259,7 +259,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           willContainRow: willContainRow[index],
                         );
                       } else {}
-                      return CircularLoader();
+                      return const CircularLoader();
                     },
                   );
                 },

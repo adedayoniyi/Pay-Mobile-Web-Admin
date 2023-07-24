@@ -43,7 +43,7 @@ class CustomTextField extends StatelessWidget {
       children: [
         Text(
           labelText!,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 1,
             fontWeight: FontWeight.bold,
           ),
@@ -54,7 +54,7 @@ class CustomTextField extends StatelessWidget {
           obscureText: obscureText,
           controller: controller,
           inputFormatters: inputFormatters,
-          style: TextStyle(fontSize: 20),
+          style: const TextStyle(fontSize: 20),
           decoration: InputDecoration(
             border: OutlineInputBorder(
               borderSide: const BorderSide(

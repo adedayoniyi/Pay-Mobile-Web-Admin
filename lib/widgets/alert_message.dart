@@ -8,7 +8,7 @@ class AlertMessage extends StatelessWidget {
   final VoidCallback onTap;
   final String alertImage;
   final Color buttonColor;
-  AlertMessage({
+  const AlertMessage({
     Key? key,
     required this.title,
     required this.message,
@@ -31,7 +31,7 @@ class AlertMessage extends StatelessWidget {
         ),
         title: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),

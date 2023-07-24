@@ -163,7 +163,7 @@ class _HomeState extends State<Home> {
       body: Row(
         children: [
           if (isDesktop)
-            Container(
+            SizedBox(
               width: screenWidth / 5,
               child: Drawer(
                 child: ListView(

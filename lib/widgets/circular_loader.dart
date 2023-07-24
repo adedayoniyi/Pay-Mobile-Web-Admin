@@ -14,11 +14,11 @@ class CircularLoader extends StatelessWidget {
             height: 35,
           ),
         ),
-        Center(
+        const Center(
           child: SizedBox(
             height: 70,
             width: 70,
-            child: const CircularProgressIndicator(),
+            child: CircularProgressIndicator(),
           ),
         ),
       ],

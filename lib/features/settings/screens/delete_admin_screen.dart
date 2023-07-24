@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:pay_mobile_web_admin/core/utils/color_constants.dart';
 import 'package:pay_mobile_web_admin/core/utils/global_constants.dart';
-import 'package:pay_mobile_web_admin/features/auth/services/auth_service.dart';
 import 'package:pay_mobile_web_admin/features/settings/services/settings_services.dart';
 import 'package:pay_mobile_web_admin/widgets/custom_button.dart';
 import 'package:pay_mobile_web_admin/widgets/custom_textfield.dart';
 import 'package:pay_mobile_web_admin/widgets/height_space.dart';
 
-import 'package:provider/provider.dart';
 
 class DeleteAdminScreen extends StatefulWidget {
   static const route = '/delete-admin';
@@ -55,13 +53,13 @@ class _DeleteAdminScreenState extends State<DeleteAdminScreen> {
         // appBar: CustomAppBar(image: logo),
         body: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  HeightSpace(10),
+                  const HeightSpace(10),
                   Padding(
-                    padding: EdgeInsets.only(right: 20),
+                    padding: const EdgeInsets.only(right: 20),
                     child: Text(
                       "Delete Admin",
                       style: TextStyle(
@@ -85,7 +83,7 @@ class _DeleteAdminScreenState extends State<DeleteAdminScreen> {
     return Form(
       key: deleteAdminFormKey,
       child: Center(
-        child: Container(
+        child: SizedBox(
           width: 400,
           child: Column(
             children: [
@@ -96,7 +94,7 @@ class _DeleteAdminScreenState extends State<DeleteAdminScreen> {
                       willContainPrefix: true,
                       labelText: "Username",
                       hintText: "Username",
-                      prefixIcon: Icon(Icons.alternate_email),
+                      prefixIcon: const Icon(Icons.alternate_email),
                       controller: usernameController,
                     ),
                   ),

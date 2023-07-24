@@ -5,7 +5,6 @@ import 'package:pay_mobile_web_admin/features/settings/screens/create_admin_scre
 import 'package:pay_mobile_web_admin/features/settings/screens/delete_admin_screen.dart';
 import 'package:pay_mobile_web_admin/features/settings/widgets/settings_card.dart';
 import 'package:pay_mobile_web_admin/widgets/height_space.dart';
-import 'package:provider/provider.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -14,10 +13,10 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            HeightSpace(15),
+            const HeightSpace(15),
             SettingsCard(
                 icon: Icons.person,
                 settingsOperation: "Create Admin",
@@ -25,7 +24,7 @@ class SettingsScreen extends StatelessWidget {
                 onPressed: () {
                   namedNav(context, CreateAdminScreen.route);
                 }),
-            HeightSpace(15),
+            const HeightSpace(15),
             SettingsCard(
                 icon: Icons.delete,
                 settingsOperation: "Delete Admin Or User",
@@ -34,7 +33,7 @@ class SettingsScreen extends StatelessWidget {
                 onPressed: () {
                   namedNav(context, DeleteAdminScreen.route);
                 }),
-            HeightSpace(15),
+            const HeightSpace(15),
             SettingsCard(
                 icon: Icons.password,
                 settingsOperation: "Change Authorization Pin",

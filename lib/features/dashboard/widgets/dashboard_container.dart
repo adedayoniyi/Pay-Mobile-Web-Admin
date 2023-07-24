@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:pay_mobile_web_admin/core/utils/color_constants.dart';
 import 'package:pay_mobile_web_admin/core/utils/global_constants.dart';
-import 'package:pay_mobile_web_admin/widgets/height_space.dart';
 
 class DashboardContainer extends StatelessWidget {
   final Color color;
@@ -87,9 +86,9 @@ class DashboardContainer extends StatelessWidget {
                   ? Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           "₦ ",
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontSize: 45,
                             fontWeight: FontWeight.w800,
                             color: secondaryAppColor,

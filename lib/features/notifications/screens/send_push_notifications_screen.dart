@@ -99,7 +99,7 @@ class _SendPushNotificationsScreenState
                       onTap: () {
                         sendPushNotifications();
                       }),
-                  HeightSpace(10),
+                  const HeightSpace(10),
                   Stack(
                     children: [
                       Image.asset(
@@ -155,7 +155,7 @@ class _SendPushNotificationsScreenState
                                                     ),
                                                   ),
                                                 ),
-                                                WidthSpace(10),
+                                                const WidthSpace(10),
                                                 const Text("Pay Mobile")
                                               ],
                                             ),

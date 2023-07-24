@@ -20,7 +20,7 @@ Route<dynamic> appRoutes(RouteSettings routeSettings) {
     case Home.route:
       return MaterialPageRoute(
         builder: (context) {
-          return Home();
+          return const Home();
         },
         settings: routeSettings,
       );

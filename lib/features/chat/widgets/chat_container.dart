@@ -17,7 +17,7 @@ class ChatContainer extends StatelessWidget {
     return Container(
       height: 100,
       width: screenWidth,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: greyScale850,
       ),
       child: Row(
@@ -33,7 +33,7 @@ class ChatContainer extends StatelessWidget {
             children: [
               Text(
                 "User's Username:$username",
-                style: TextStyle(fontSize: 23),
+                style: const TextStyle(fontSize: 23),
               ),
               Text(latestMessage)
               // Text(

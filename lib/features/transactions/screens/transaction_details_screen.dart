@@ -73,7 +73,7 @@ class TransactionDetailsScreen extends StatelessWidget {
       // ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -100,7 +100,7 @@ class TransactionDetailsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Text(
@@ -203,7 +203,7 @@ class TransactionDetailsScreen extends StatelessWidget {
                           "assets/icons/info-circle.png",
                           height: heightValue30,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Text(

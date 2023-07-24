@@ -67,7 +67,7 @@ class _MyAppState extends State<MyApp> {
                 : const LoginScreen();
           } else {}
 
-          return const CircularLoader();
+          return const Scaffold(body: CircularLoader());
         },
       ),
       //initialRoute: "/login",

@@ -28,7 +28,7 @@ class SettingsCard extends StatelessWidget {
           color: greyScale850,
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -49,7 +49,7 @@ class SettingsCard extends StatelessWidget {
                     )),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 20),
+                    padding: const EdgeInsets.only(left: 20),
                     child: Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -57,14 +57,14 @@ class SettingsCard extends StatelessWidget {
                         children: [
                           Text(
                             settingsOperation,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
                             ),
                           ),
                           Text(
                             settingsOperationDescription,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 15,
                             ),
                             overflow: TextOverflow.ellipsis,

@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:pay_mobile_web_admin/core/utils/color_constants.dart';
 import 'package:pay_mobile_web_admin/core/utils/global_constants.dart';
-import 'package:pay_mobile_web_admin/features/auth/services/auth_service.dart';
 import 'package:pay_mobile_web_admin/features/settings/services/settings_services.dart';
 import 'package:pay_mobile_web_admin/widgets/custom_button.dart';
 import 'package:pay_mobile_web_admin/widgets/custom_textfield.dart';
 import 'package:pay_mobile_web_admin/widgets/height_space.dart';
 
-import 'package:provider/provider.dart';
 
 class ChangeAdminAuthScreen extends StatefulWidget {
   static const route = '/change-admin-auth-pin';
@@ -55,13 +53,13 @@ class _ChangeAdminAuthScreenState extends State<ChangeAdminAuthScreen> {
         // appBar: CustomAppBar(image: logo),
         body: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  HeightSpace(10),
+                  const HeightSpace(10),
                   Padding(
-                    padding: EdgeInsets.only(right: 20),
+                    padding: const EdgeInsets.only(right: 20),
                     child: Text(
                       "Change Admin Auth Pin",
                       style: TextStyle(
@@ -85,7 +83,7 @@ class _ChangeAdminAuthScreenState extends State<ChangeAdminAuthScreen> {
     return Form(
       key: changeAdminAuthPinFormKey,
       child: Center(
-        child: Container(
+        child: SizedBox(
           width: 400,
           child: Column(
             children: [

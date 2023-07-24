@@ -27,7 +27,7 @@ class SendersMessageCard extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              color: Color(0xFFb8c2b7),
+              color: const Color(0xFFb8c2b7),
             ),
             child: Padding(
               padding:
@@ -37,25 +37,25 @@ class SendersMessageCard extends StatelessWidget {
                 children: [
                   Text(
                     user,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  HeightSpace(5),
+                  const HeightSpace(5),
                   Text(
                     message,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  HeightSpace(5),
+                  const HeightSpace(5),
                   Text(
                     dateTime,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.black,
                       fontSize: 13,
                     ),
