@@ -2,7 +2,7 @@
 
 <img src="assets/images/pay_mobile_web_advert.png" alt="Pay Mobile" title="Pay Mobile">
 
-![GitHub repo size](https://img.shields.io/github/repo-size/adedayoniyi/Pay-Mobile-P2P-Money-Transfer-App)
+![GitHub repo size](https://img.shields.io/github/repo-size/adedayoniyi/Pay-Mobile-Web-Admin)
 
 ## This is the Web Admin for the Pay Mobile app. It has two levels (i.e ADMIN and AGENT). Agent has limited features but ADMIN has all the features
 

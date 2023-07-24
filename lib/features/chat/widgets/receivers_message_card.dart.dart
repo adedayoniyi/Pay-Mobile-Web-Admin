@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:pay_mobile_web_admin/core/utils/color_constants.dart';
 import 'package:pay_mobile_web_admin/widgets/height_space.dart';
 
 class ReceiversMessageCard extends StatelessWidget {
@@ -19,45 +19,45 @@ class ReceiversMessageCard extends StatelessWidget {
       alignment: Alignment.bottomLeft,
       child: ConstrainedBox(
         constraints: BoxConstraints(
-          maxWidth: MediaQuery.of(context).size.width - 45,
+          maxWidth: MediaQuery.of(context).size.width - 48,
         ),
         child: Padding(
-          padding: const EdgeInsets.only(
+          padding: EdgeInsets.only(
             left: 20,
             top: 10,
           ),
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              color: Colors.white,
+              color: const Color(0xFFb9b6c1),
             ),
             child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     user,
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 14,
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 15,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  HeightSpace(10),
                   Text(
                     message,
-                    style: const TextStyle(
-                      color: Colors.black,
+                    style: TextStyle(
+                      color: secondaryAppColor,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const HeightSpace(5),
+                  HeightSpace(15),
                   Text(
                     dateTime,
-                    style: const TextStyle(
-                      color: Colors.black,
+                    style: TextStyle(
+                      color: secondaryAppColor,
                       fontSize: 13,
                     ),
                   ),

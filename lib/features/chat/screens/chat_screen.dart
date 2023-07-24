@@ -96,6 +96,7 @@ class _ChatScreenState extends State<ChatScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Pay Mobile Support'),
+          centerTitle: true,
         ),
         body: Column(
           children: [
