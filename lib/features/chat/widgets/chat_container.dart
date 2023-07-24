@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:pay_mobile_web_admin/core/utils/color_constants.dart';
 import 'package:pay_mobile_web_admin/core/utils/global_constants.dart';
+import 'package:pay_mobile_web_admin/widgets/width_space.dart';
 
 class ChatContainer extends StatelessWidget {
   final String username;
@@ -17,32 +18,38 @@ class ChatContainer extends StatelessWidget {
     return Container(
       height: 100,
       width: screenWidth,
-      decoration: const BoxDecoration(
-        color: greyScale850,
-      ),
-      child: Row(
-        children: [
-          CircleAvatar(
-            radius: 30,
-            child: Center(
-              child: Text(username[0].toUpperCase()),
-            ),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "User's Username:$username",
-                style: const TextStyle(fontSize: 23),
+      decoration: BoxDecoration(
+          color: greyScale850, borderRadius: BorderRadius.circular(20)),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 20,
+              child: Center(
+                child: Text(username[0].toUpperCase()),
               ),
-              Text(latestMessage)
-              // Text(
-              //   userChatName,
-              //   style: TextStyle(fontSize: 23),
-              // ), //
-            ],
-          ),
-        ],
+            ),
+            WidthSpace(20),
+            Flexible(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "User's Username: $username",
+                    style: const TextStyle(fontSize: 23),
+                  ),
+                  Text(
+                    "Latest Message: $latestMessage",
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 15),
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

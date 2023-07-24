@@ -14,15 +14,15 @@ class ChatServices {
     required BuildContext context,
   }) async {
     List<ChatModel> chatModel = [];
-    // final userToken =
-    //     Provider.of<UserProvider>(context, listen: false).user.token;
-    //final chatProvider = Provider.of<ChatProvider>(context, listen: false);
+    final userToken =
+        Provider.of<UserProvider>(context, listen: false).user.token;
 
     try {
       http.Response res = await http.get(
         Uri.parse("$uri/admin/getAllChats"),
         headers: <String, String>{
           "Content-Type": "application/json; charset=UTF-8",
+          "x-auth-token": userToken,
         },
       );
 

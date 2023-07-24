@@ -95,7 +95,7 @@ class _ChatScreenState extends State<ChatScreen> {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Chat'),
+          title: const Text('Pay Mobile Support'),
         ),
         body: Column(
           children: [

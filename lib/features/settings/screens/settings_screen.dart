@@ -29,7 +29,7 @@ class SettingsScreen extends StatelessWidget {
                 icon: Icons.delete,
                 settingsOperation: "Delete Admin Or User",
                 settingsOperationDescription:
-                    "Delete an existing admin or agent",
+                    "Delete an existing admin or agent or user",
                 onPressed: () {
                   namedNav(context, DeleteAdminScreen.route);
                 }),

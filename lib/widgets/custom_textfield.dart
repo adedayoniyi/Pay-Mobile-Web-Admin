@@ -44,7 +44,7 @@ class CustomTextField extends StatelessWidget {
         Text(
           labelText!,
           style: const TextStyle(
-            fontSize: 1,
+            fontSize: 15,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -83,7 +83,7 @@ class CustomTextField extends StatelessWidget {
             prefixIcon: prefixIcon,
             filled: true,
             fillColor: greyScale850,
-            contentPadding: EdgeInsets.all(heightValue10),
+            contentPadding: EdgeInsets.all(10),
           ),
           maxLines: maxLines,
           validator: validator,

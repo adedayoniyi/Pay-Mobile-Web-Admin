@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pay_mobile_web_admin/core/utils/color_constants.dart';
 import 'package:pay_mobile_web_admin/features/auth/providers/user_provider.dart';
 import 'package:pay_mobile_web_admin/features/chat/models/chat_model.dart';
 import 'package:pay_mobile_web_admin/features/chat/screens/chat_screen.dart';
@@ -47,6 +48,7 @@ class _ChatListScreenState extends State<ChatListScreen> {
   void initState() {
     super.initState();
     future = getChats();
+    print(chatList);
   }
 
   @override
@@ -63,6 +65,7 @@ class _ChatListScreenState extends State<ChatListScreen> {
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
+                      color: whiteColor,
                     ),
                   ))
                 : Column(
@@ -76,6 +79,7 @@ class _ChatListScreenState extends State<ChatListScreen> {
                       ),
                       const Text(
                         "Provide Support to Users of the Pay Mobile App",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 20,
                         ),
@@ -95,9 +99,12 @@ class _ChatListScreenState extends State<ChatListScreen> {
                                 Navigator.pushNamed(context, ChatScreen.route,
                                     arguments: chatList![index]);
                               },
-                              child: ChatContainer(
-                                username: chatData.sender,
-                                latestMessage: chatData.latestMessage,
+                              child: Padding(
+                                padding: const EdgeInsets.all(15),
+                                child: ChatContainer(
+                                  username: chatData.sender,
+                                  latestMessage: chatData.latestMessage,
+                                ),
                               ),
                             );
                           },

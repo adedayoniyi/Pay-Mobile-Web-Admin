@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
     final user = Provider.of<UserProvider>(context).user;
     final ThemeManager themeManager = ThemeManager();
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Pay Mobile',
       theme: themeManager.darkTheme,
       darkTheme: themeManager.darkTheme,
       debugShowCheckedModeBanner: false,
