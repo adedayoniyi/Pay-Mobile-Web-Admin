@@ -86,6 +86,7 @@ class _ChatScreenState extends State<ChatScreen> {
         () => _scrollController
             .jumpTo(_scrollController.position.maxScrollExtent),
       );
+      loadMessages();
     }
   }
 
