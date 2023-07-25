@@ -39,131 +39,136 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     final screenWidthValue = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Form(
-        key: loginFormKey,
-        child: Row(
-          mainAxisAlignment: ResponsiveBreakpoints.of(context).isDesktop
-              ? MainAxisAlignment.spaceEvenly
-              : MainAxisAlignment.center,
-          children: [
-            ResponsiveBreakpoints.of(context).isDesktop
-                ? Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text(
-                        "Web Admin",
-                        style: TextStyle(
-                          fontSize: 35,
-                          fontWeight: FontWeight.bold,
+      body: SingleChildScrollView(
+        child: Form(
+          key: loginFormKey,
+          child: Row(
+            mainAxisAlignment: ResponsiveBreakpoints.of(context).isDesktop
+                ? MainAxisAlignment.spaceEvenly
+                : MainAxisAlignment.center,
+            children: [
+              ResponsiveBreakpoints.of(context).isDesktop
+                  ? Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          "Web Admin",
+                          style: TextStyle(
+                            fontSize: 35,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
+                        Image.asset(
+                          loginScreenImage,
+                          height: screenWidthValue * 0.42,
+                          width: screenWidthValue * 0.42,
+                        ),
+                      ],
+                    )
+                  : const SizedBox.shrink(),
+              SizedBox(
+                width: 380,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      top: 110,
+                      child: Image.asset(
+                        gradientCircle,
+                        height: 100,
                       ),
-                      Image.asset(
-                        loginScreenImage,
-                        height: screenWidthValue * 0.42,
-                        width: screenWidthValue * 0.42,
+                    ),
+                    Positioned(
+                      top: 230,
+                      left: 250,
+                      child: Image.asset(
+                        gradientCircle,
+                        height: 100,
                       ),
-                    ],
-                  )
-                : const SizedBox.shrink(),
-            SizedBox(
-              width: 380,
-              child: Stack(
-                children: [
-                  Positioned(
-                    top: 110,
-                    child: Image.asset(
-                      gradientCircle,
-                      height: 100,
                     ),
-                  ),
-                  Positioned(
-                    top: 230,
-                    left: 250,
-                    child: Image.asset(
-                      gradientCircle,
-                      height: 100,
-                    ),
-                  ),
-                  Positioned(
-                    bottom: 40,
-                    left: 185,
-                    child: Image.asset(
-                      gradientCircle,
-                      height: 100,
-                    ),
-                  ),
-                  Positioned(
-                    bottom: 100,
-                    left: 90,
-                    child: Image.asset(
-                      gradientCircle,
-                      height: 75,
-                    ),
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        mainLogo,
-                        height: 70,
+                    Positioned(
+                      bottom: 40,
+                      left: 185,
+                      child: Image.asset(
+                        gradientCircle,
+                        height: 100,
                       ),
-                      const HeightSpace(20),
-                      Center(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: BackdropFilter(
-                            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                            child: Container(
-                              height: 400,
-                              width: 350,
-                              decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 20, vertical: 20),
-                                child: Column(
-                                  children: [
-                                    const Text(
-                                      "Login",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20,
+                    ),
+                    Positioned(
+                      bottom: 100,
+                      left: 90,
+                      child: Image.asset(
+                        gradientCircle,
+                        height: 75,
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          mainLogo,
+                          height: 70,
+                        ),
+                        const HeightSpace(20),
+                        Center(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: BackdropFilter(
+                              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                              child: Container(
+                                height: 400,
+                                width:
+                                    ResponsiveBreakpoints.of(context).isMobile
+                                        ? screenWidthValue / 1.3
+                                        : 350,
+                                decoration: BoxDecoration(
+                                  color: Colors.white.withOpacity(0.2),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 20, vertical: 20),
+                                  child: Column(
+                                    children: [
+                                      const Text(
+                                        "Login",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20,
+                                        ),
                                       ),
-                                    ),
-                                    const HeightSpace(10),
-                                    CustomTextField(
-                                      hintText: "Email",
-                                      controller: emailController,
-                                      validator: validateEmail,
-                                    ),
-                                    CustomTextField(
-                                      hintText: "Password",
-                                      controller: passwordController,
-                                      validator: validateField,
-                                    ),
-                                    CustomButton(
-                                      buttonText: "Login",
-                                      buttonTextColor: secondaryAppColor,
-                                      borderRadius: heightValue30,
-                                      onTap: () {
-                                        loginAdmin();
-                                      },
-                                    )
-                                  ],
+                                      const HeightSpace(10),
+                                      CustomTextField(
+                                        hintText: "Email",
+                                        controller: emailController,
+                                        validator: validateEmail,
+                                      ),
+                                      CustomTextField(
+                                        hintText: "Password",
+                                        controller: passwordController,
+                                        validator: validateField,
+                                      ),
+                                      CustomButton(
+                                        buttonText: "Login",
+                                        buttonTextColor: secondaryAppColor,
+                                        borderRadius: heightValue30,
+                                        onTap: () {
+                                          loginAdmin();
+                                        },
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

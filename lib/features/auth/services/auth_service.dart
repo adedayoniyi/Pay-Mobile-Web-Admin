@@ -44,7 +44,6 @@ class AuthService {
                 'x-auth-token', jsonDecode(res.body)['token']);
 
             namedNavRemoveUntil(context, Home.route);
-            print(prefs.getString("x-auth-token"));
           });
     } on Error catch (e) {
       print('Login Error: $e');
@@ -85,8 +84,6 @@ class AuthService {
           listen: false,
         );
         userProvider.setUser(returnedUserResponse.body);
-        print(returnedUserResponse.body);
-        print(response);
         //Navigator.of(context, rootNavigator: true).pop('dialog');
       }
       return response;
