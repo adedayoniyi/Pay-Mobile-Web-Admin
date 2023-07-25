@@ -6,6 +6,8 @@
 
 ## This is the Web Admin for the <a href="https://github.com/adedayoniyi/Pay-Mobile-P2P-Money-Transfer-App">Pay Mobile P2P Money Transfer App</a>. It has two levels `(i.e ADMIN and AGENT)` . `AGENT(Customer Service)` has limited features but `ADMIN` has all the features.
 
+#### Live Link: <a href="https://pay-mobile.netlify.app/">Pay Mobile Web Admin</a>
+
 # Main Features
 
 #### 1. Dashboard for viewing all users neccessary data.
@@ -24,7 +26,7 @@
 
 <img src="assets/images/customer-support_showcase.png" alt="Customer Support Showcase" title="Customer Support Showcase">
 
-#### 5. Settings
+#### 5. Settings, only `ADMIN` can access this route
 
 <img src="assets/images/settings_showcase.png" alt="Settings Showcase" title="Settings Showcase">
 
@@ -32,7 +34,13 @@
 
 <img src="assets/images/agent_showcase.png" alt="Agent Showcase" title="Agent Showcase">
 
+### After log in, the user type state is stored and used throughout the web app
+
+<img src="assets/images/login_screen_showcase.png" alt="Login Screen Showcase" title="Login Screen Showcase">
+
 ### QUICK START ⚡
+
+#### Visit:<a href=" https://github.com/adedayoniyi/Pay-Mobile-Full-Stack"> Pay Mobile Full Stack </a> to access the full stack code of the software (i.e the Back End and the Mobile Front End)
 
 ### Note: The server running this web app has already been deployed to render.com, which means you can immediately clone this repo, run it and start using it (i.e The backend is already connected).
 
@@ -48,6 +56,7 @@ flutter pub get
 2. <a href="https://pub.dev/packages/shared_preferences">shared_preferences</a>
 3. <a href="https://pub.dev/packages/http">http</a>
 4. <a href="https://pub.dev/packages/intl">intl</a>
+
 5. <a href="https://pub.dev/packages/socket_io_client">socket_io_client</a>
 6. <a href="https://pub.dev/packages/responsive_framework">responsive_framework</a>
 

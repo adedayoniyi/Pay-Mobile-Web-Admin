@@ -6,7 +6,6 @@ import 'package:pay_mobile_web_admin/widgets/custom_button.dart';
 import 'package:pay_mobile_web_admin/widgets/custom_textfield.dart';
 import 'package:pay_mobile_web_admin/widgets/height_space.dart';
 
-
 class DeleteAdminScreen extends StatefulWidget {
   static const route = '/delete-admin';
   const DeleteAdminScreen({super.key});
@@ -37,7 +36,7 @@ class _DeleteAdminScreenState extends State<DeleteAdminScreen> {
   void deleteAdmin() async {
     //final authProvider = Provider.of<AuthProvider>(context, listen: false);
     if (deleteAdminFormKey.currentState!.validate()) {
-      settingsServices.deleteAdmin(
+      settingsServices.deleteAdminOrUser(
         context: context,
         username: usernameController.text,
         authorizationPin: pinController.text,
